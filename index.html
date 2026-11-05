@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SWR StrictMode race reproduction</title>
+  <style>
+    body { max-width: 48rem; margin: 3rem auto; padding: 0 1rem; font: 18px/1.5 system-ui,sans-serif; color: #17232d; }
+    button,select { font: inherit; padding: .4rem .7rem; } li { margin-block: .7rem; } output { font-weight: 700; }
+    form { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; padding-block: 1rem; border-bottom: 1px solid #ccc; }
+    :focus-visible { outline: 3px solid #3267d6; outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <form>
+    <label>Dependency <select name="version"><option value="unpatched">SWR 2.5.1</option><option value="fixed">SWR 2.5.1 + proposed fix</option></select></label>
+    <label>StrictMode <select name="strict"><option value="true">On</option><option value="false">Off</option></select></label>
+    <button>Load example</button>
+  </form>
+  <p><a href="https://github.com/grrowl/swr-strictmode-repro">Source and explanation</a> · <a href="https://stackblitz.com/github/grrowl/swr-strictmode-repro?file=src/App.jsx">Edit in StackBlitz</a></p>
+  <div id="root"></div>
+  <script type="module">
+    const params = new URLSearchParams(location.search);
+    document.querySelector('[name=version]').value = params.get('version') ?? 'unpatched';
+    document.querySelector('[name=strict]').value = params.get('strict') ?? 'true';
+    await import(params.get('version') === 'fixed' ? './fixed.js' : './unpatched.js');
+  </script>
+</body>
+</html>

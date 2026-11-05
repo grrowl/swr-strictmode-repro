@@ -1,0 +1,76 @@
+
+> swr-strictmode-mutation-repro@1.0.0 verify
+> node scripts/verify.mjs
+
+[WebServer] (node:423314) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:423326) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/race.spec.js:2:1 › a completed mutation survives an older GET (621ms)
+
+  1 passed (1.5s)
+Dependency=unpatched; StrictMode=false; actual exit=0; expected exit=0
+[WebServer] (node:423425) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:423437) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/race.spec.js:2:1 › a completed mutation survives an older GET (5.5s)
+
+
+  1) tests/race.spec.js:2:1 › a completed mutation survives an older GET ───────────────────────────
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  getByRole('status', { name: 'Cached value' })
+    Expected: "disabled"
+    Received: "enabled"
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toHaveText" with timeout 5000ms
+      - waiting for getByRole('status', { name: 'Cached value' })
+        14 × locator resolved to <output aria-label="Cached value">enabled</output>
+           - unexpected value "enabled"
+
+
+      15 |   await expect(page.getByText('Read: idle; write: idle.', { exact: true })).toBeVisible();
+      16 |   await page.screenshot({ path: `evidence/${version}-strict-${strict}.png`, fullPage: true });
+    > 17 |   await expect(value).toHaveText('disabled');
+         |                       ^
+      18 | });
+      19 |
+        at /tmp/swr-strictmode-repro/tests/race.spec.js:17:23
+
+    Error Context: test-results/race-a-completed-mutation-survives-an-older-GET/error-context.md
+
+  1 failed
+    tests/race.spec.js:2:1 › a completed mutation survives an older GET ────────────────────────────
+Dependency=unpatched; StrictMode=true; actual exit=1; expected exit=1
+[WebServer] (node:423548) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:423560) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/race.spec.js:2:1 › a completed mutation survives an older GET (618ms)
+
+  1 passed (1.7s)
+Dependency=fixed; StrictMode=true; actual exit=0; expected exit=0
+[WebServer] (node:423704) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:423716) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/race.spec.js:2:1 › a completed mutation survives an older GET (719ms)
+
+  1 passed (1.5s)
+Dependency=fixed; StrictMode=false; actual exit=0; expected exit=0

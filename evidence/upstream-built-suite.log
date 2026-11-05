@@ -1,0 +1,181 @@
+(node:2) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/swr-strictmode-upstream/jest.config.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /tmp/swr-strictmode-upstream/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS test/use-swr-local-mutation.test.tsx (7.194 s)
+  ● Console
+
+    console.error
+      Warning: The current testing environment is not configured to support act(...)
+
+      225 |     // Get the current state that SWR should return.
+      226 |     const cached = shim.useSyncExternalStore(React.useCallback((callback)=>subscribeCache(key, (current, prev)=>{
+    > 227 |             if (!isEqual(prev, current)) callback();
+          |                                          ^
+      228 |         }), // eslint-disable-next-line react-hooks/exhaustive-deps
+      229 |     [
+      230 |         cache,
+
+      at printWarning (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at isConcurrentActEnvironment (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:25299:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:27598:12)
+      at scheduleUpdateOnFiber (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at forceStoreRerender (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:16158:5)
+      at handleStoreChange (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:16134:7)
+      at callback (dist/use-swr-i9aj37sp.js:227:42)
+      at Array.fn (dist/config-context-ll3y5lv3.js:469:21)
+      at dist/config-context-ll3y5lv3.js:65:25
+      at setCache (dist/use-swr-i9aj37sp.js:349:13)
+      at finishRequestAndUpdateState (dist/use-swr-i9aj37sp.js:492:9)
+
+    console.error
+      Warning: The current testing environment is not configured to support act(...)
+
+      225 |     // Get the current state that SWR should return.
+      226 |     const cached = shim.useSyncExternalStore(React.useCallback((callback)=>subscribeCache(key, (current, prev)=>{
+    > 227 |             if (!isEqual(prev, current)) callback();
+          |                                          ^
+      228 |         }), // eslint-disable-next-line react-hooks/exhaustive-deps
+      229 |     [
+      230 |         cache,
+
+      at printWarning (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at isConcurrentActEnvironment (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:25299:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:27598:12)
+      at scheduleUpdateOnFiber (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at forceStoreRerender (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:16158:5)
+      at handleStoreChange (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:16134:7)
+      at callback (dist/use-swr-i9aj37sp.js:227:42)
+      at Array.fn (dist/config-context-ll3y5lv3.js:469:21)
+      at dist/config-context-ll3y5lv3.js:65:25
+      at set (dist/config-context-ll3y5lv3.js:373:21)
+      at mutateByKey (dist/config-context-ll3y5lv3.js:273:12)
+      at mutate (test/use-swr-local-mutation.test.tsx:1863:7)
+      at act (node_modules/.pnpm/react@18.3.1/node_modules/react/cjs/react.development.js:2512:16)
+      at Object.<anonymous> (test/use-swr-local-mutation.test.tsx:1861:8)
+
+    console.error
+      Warning: The current testing environment is not configured to support act(...)
+
+      225 |     // Get the current state that SWR should return.
+      226 |     const cached = shim.useSyncExternalStore(React.useCallback((callback)=>subscribeCache(key, (current, prev)=>{
+    > 227 |             if (!isEqual(prev, current)) callback();
+          |                                          ^
+      228 |         }), // eslint-disable-next-line react-hooks/exhaustive-deps
+      229 |     [
+      230 |         cache,
+
+      at printWarning (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at isConcurrentActEnvironment (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:25299:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:27598:12)
+      at scheduleUpdateOnFiber (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at forceStoreRerender (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:16158:5)
+      at handleStoreChange (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:16134:7)
+      at callback (dist/use-swr-i9aj37sp.js:227:42)
+      at Array.fn (dist/config-context-ll3y5lv3.js:469:21)
+      at dist/config-context-ll3y5lv3.js:65:25
+      at set (dist/config-context-ll3y5lv3.js:373:21)
+      at mutateByKey (dist/config-context-ll3y5lv3.js:273:12)
+      at mutate (test/use-swr-local-mutation.test.tsx:1869:7)
+      at act (node_modules/.pnpm/react@18.3.1/node_modules/react/cjs/react.development.js:2512:16)
+      at Object.<anonymous> (test/use-swr-local-mutation.test.tsx:1867:8)
+
+    console.error
+      Warning: The current testing environment is not configured to support act(...)
+
+      225 |     // Get the current state that SWR should return.
+      226 |     const cached = shim.useSyncExternalStore(React.useCallback((callback)=>subscribeCache(key, (current, prev)=>{
+    > 227 |             if (!isEqual(prev, current)) callback();
+          |                                          ^
+      228 |         }), // eslint-disable-next-line react-hooks/exhaustive-deps
+      229 |     [
+      230 |         cache,
+
+      at printWarning (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at isConcurrentActEnvironment (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:25299:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:27598:12)
+      at scheduleUpdateOnFiber (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at forceStoreRerender (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:16158:5)
+      at handleStoreChange (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:16134:7)
+      at callback (dist/use-swr-i9aj37sp.js:227:42)
+      at Array.fn (dist/config-context-ll3y5lv3.js:469:21)
+      at dist/config-context-ll3y5lv3.js:65:25
+      at set (dist/config-context-ll3y5lv3.js:373:21)
+      at mutateByKey (dist/config-context-ll3y5lv3.js:273:12)
+      at mutate (test/use-swr-local-mutation.test.tsx:1893:7)
+      at act (node_modules/.pnpm/react@18.3.1/node_modules/react/cjs/react.development.js:2512:16)
+      at Object.<anonymous> (test/use-swr-local-mutation.test.tsx:1891:8)
+
+    console.error
+      Warning: The current testing environment is not configured to support act(...)
+
+      225 |     // Get the current state that SWR should return.
+      226 |     const cached = shim.useSyncExternalStore(React.useCallback((callback)=>subscribeCache(key, (current, prev)=>{
+    > 227 |             if (!isEqual(prev, current)) callback();
+          |                                          ^
+      228 |         }), // eslint-disable-next-line react-hooks/exhaustive-deps
+      229 |     [
+      230 |         cache,
+
+      at printWarning (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at isConcurrentActEnvironment (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:25299:7)
+      at warnIfUpdatesNotWrappedWithActDEV (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:27598:12)
+      at scheduleUpdateOnFiber (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:25547:5)
+      at forceStoreRerender (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:16158:5)
+      at handleStoreChange (node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/cjs/react-dom.development.js:16134:7)
+      at callback (dist/use-swr-i9aj37sp.js:227:42)
+      at Array.fn (dist/config-context-ll3y5lv3.js:469:21)
+      at dist/config-context-ll3y5lv3.js:65:25
+      at set (dist/config-context-ll3y5lv3.js:373:21)
+      at mutateByKey (dist/config-context-ll3y5lv3.js:273:12)
+      at mutate (test/use-swr-local-mutation.test.tsx:1899:7)
+      at act (node_modules/.pnpm/react@18.3.1/node_modules/react/cjs/react.development.js:2512:16)
+      at Object.<anonymous> (test/use-swr-local-mutation.test.tsx:1897:8)
+
+PASS test/use-swr-error.test.tsx
+PASS test/use-swr-infinite.test.tsx
+PASS test/use-swr-subscription.test.tsx
+PASS test/use-swr-laggy.test.tsx
+PASS test/use-swr-integration.test.tsx
+PASS test/use-swr-loading.test.tsx
+PASS test/use-swr-suspense.test.tsx
+PASS test/use-swr-remote-mutation.test.tsx
+PASS test/use-swr-immutable.test.tsx
+PASS test/use-swr-promise.test.tsx
+PASS test/use-swr-focus.test.tsx
+PASS test/unit/serialize.test.ts
+PASS test/use-swr-infinite-preload.test.tsx
+PASS test/use-swr-key.test.tsx
+PASS test/use-swr-config.test.tsx
+PASS test/use-swr-middlewares.test.tsx
+PASS test/use-swr-config-callbacks.test.tsx
+PASS test/use-swr-streaming-ssr.test.tsx
+PASS test/use-swr-revalidate.test.tsx
+PASS test/use-swr-tags.test.tsx
+PASS test/use-swr-unload.test.tsx
+PASS test/use-swr-cache.test.tsx
+PASS test/use-swr-preload.test.tsx
+PASS test/unit/web-preset.test.ts
+PASS test/use-swr-provider-replay.test.tsx
+PASS test/use-swr-legacy-react.test.tsx
+PASS test/use-swr-concurrent-rendering.test.tsx
+PASS test/use-swr-node-env.test.tsx
+PASS test/use-swr-context-config.test.tsx
+PASS test/use-swr-refresh.test.tsx
+PASS test/use-swr-reconnect.test.tsx
+PASS test/unit/utils.test.tsx
+PASS test/use-swr-fetcher.test.tsx
+PASS test/use-swr-server.test.tsx
+PASS test/use-swr-offline.test.tsx
+PASS test/use-swr-devtools.test.tsx
+
+Test Suites: 37 passed, 37 total
+Tests:       5 skipped, 401 passed, 406 total
+Snapshots:   6 passed, 6 total
+Time:        33.462 s, estimated 38 s
+Ran all test suites.

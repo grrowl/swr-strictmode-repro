@@ -1,0 +1,48 @@
+FAIL test/use-swr-provider-replay.test.tsx
+  cache provider effect replay
+    ✓ should discard reads overlapping a completed mutation (StrictMode: false) (221 ms)
+    ✕ should discard reads overlapping a completed mutation (StrictMode: true) (77 ms)
+    ✓ should deduplicate a reader mounted after effect replay (StrictMode: false) (58 ms)
+    ✕ should deduplicate a reader mounted after effect replay (StrictMode: true) (60 ms)
+
+  ● cache provider effect replay › should discard reads overlapping a completed mutation (StrictMode: true)
+
+    expect(element).toHaveTextContent()
+
+    Expected element to have text content:
+      disabled
+    Received:
+      enabled
+
+      78 |         await refresh
+      79 |       })
+    > 80 |       expect(value).toHaveTextContent('disabled')
+         |                     ^
+      81 |     }
+      82 |   )
+      83 |
+
+      at toHaveTextContent (test/use-swr-provider-replay.test.tsx:80:21)
+
+  ● cache provider effect replay › should deduplicate a reader mounted after effect replay (StrictMode: true)
+
+    expect(jest.fn()).toHaveBeenCalledTimes(expected)
+
+    Expected number of calls: 1
+    Received number of calls: 2
+
+      118 |         screen.getAllByRole('status').map(value => value.textContent)
+      119 |       ).toEqual(['shared', 'shared'])
+    > 120 |       expect(fetcher).toHaveBeenCalledTimes(1)
+          |                       ^
+      121 |     }
+      122 |   )
+      123 | })
+
+      at toHaveBeenCalledTimes (test/use-swr-provider-replay.test.tsx:120:23)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 2 passed, 4 total
+Snapshots:   0 total
+Time:        1.445 s
+Ran all test suites matching test/use-swr-provider-replay.test.tsx.

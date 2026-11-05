@@ -1,0 +1,20 @@
+{
+  "node": "v22.23.3",
+  "packages": {
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "swr": "2.5.1",
+    "@playwright/test": "1.61.1",
+    "esbuild": "0.28.2"
+  },
+  "browser": {
+    "name": "chromium-headless-shell",
+    "revision": "1228",
+    "installByDefault": true,
+    "browserVersion": "149.0.7827.55",
+    "title": "Chrome Headless Shell"
+  },
+  "upstreamRevision": "8148ef012fd5b317d1e8ec2da4b2ca0673f63c0f",
+  "upstreamReact": "18.3.1",
+  "upstreamFixCommit": "315d79272cedd0cf06d5e159a6ef5ccc728a73d8"
+}

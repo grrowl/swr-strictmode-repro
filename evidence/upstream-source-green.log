@@ -1,0 +1,12 @@
+PASS test/use-swr-provider-replay.test.tsx
+  cache provider effect replay
+    ✓ should discard reads overlapping a completed mutation (StrictMode: false) (82 ms)
+    ✓ should discard reads overlapping a completed mutation (StrictMode: true) (15 ms)
+    ✓ should deduplicate a reader mounted after effect replay (StrictMode: false) (22 ms)
+    ✓ should deduplicate a reader mounted after effect replay (StrictMode: true) (14 ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       4 passed, 4 total
+Snapshots:   0 total
+Time:        0.932 s, estimated 2 s
+Ran all test suites matching test/use-swr-provider-replay.test.tsx.

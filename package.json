@@ -1,0 +1,9 @@
+{
+  "name": "swr-strictmode-mutation-repro",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node scripts/build.mjs", "start": "node scripts/server.mjs", "test": "playwright test", "verify": "node scripts/verify.mjs" },
+  "dependencies": { "react": "19.2.8", "react-dom": "19.2.8", "swr": "2.5.1" },
+  "devDependencies": { "@playwright/test": "1.61.1", "esbuild": "0.28.2" }
+}

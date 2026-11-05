@@ -1,0 +1,61 @@
+
+> swr@2.6.0-beta.0 build
+> bunchee
+
+! Lint: 28 issues found.
+! Declared output does not exist on disk: ./dist/index/react-server.d.mts
+! Declared output does not exist on disk: ./dist/index/react-server.mjs
+! Declared output does not exist on disk: ./dist/index/index.d.mts
+! Declared output does not exist on disk: ./dist/index/index.mjs
+! Declared output does not exist on disk: ./dist/index/index.d.ts
+! Declared output does not exist on disk: ./dist/index/index.js
+! Declared output does not exist on disk: ./dist/infinite/react-server.mjs
+! Declared output does not exist on disk: ./dist/infinite/index.d.mts
+! Declared output does not exist on disk: ./dist/infinite/index.mjs
+! Declared output does not exist on disk: ./dist/infinite/index.d.ts
+! Declared output does not exist on disk: ./dist/infinite/index.js
+! Declared output does not exist on disk: ./dist/immutable/index.d.mts
+! Declared output does not exist on disk: ./dist/immutable/index.mjs
+! Declared output does not exist on disk: ./dist/immutable/index.d.ts
+! Declared output does not exist on disk: ./dist/immutable/index.js
+! Declared output does not exist on disk: ./dist/subscription/index.d.mts
+! Declared output does not exist on disk: ./dist/subscription/index.mjs
+! Declared output does not exist on disk: ./dist/subscription/index.d.ts
+! Declared output does not exist on disk: ./dist/subscription/index.js
+! Declared output does not exist on disk: ./dist/mutation/index.d.mts
+! Declared output does not exist on disk: ./dist/mutation/index.mjs
+! Declared output does not exist on disk: ./dist/mutation/index.d.ts
+! Declared output does not exist on disk: ./dist/mutation/index.js
+! Declared output does not exist on disk: ./dist/_internal/index.react-server.mjs
+! Declared output does not exist on disk: ./dist/_internal/index.d.mts
+! Declared output does not exist on disk: ./dist/_internal/index.mjs
+! Declared output does not exist on disk: ./dist/_internal/index.d.ts
+! Declared output does not exist on disk: ./dist/_internal/index.js
+Using @typescript/typescript6 API for TypeScript 7.0.2 type declaration generation
+! The following exports are defined in package.json but missing source files:
+⨯ ./_internal
+
+Exports                           File                                     Size
+.                                 dist/index/index.mjs                     453 B
+                                  dist/index/index.js                      667 B
+                                  dist/index/index.d.mts                   583 B
+                                  dist/index/index.d.ts                    583 B
+. (react-server)                  dist/index/react-server.mjs              266 B
+                                  dist/index/react-server.d.mts            389 B
+./infinite                        dist/infinite/index.mjs                  11.7 kB
+                                  dist/infinite/index.js                   12.1 kB
+                                  dist/infinite/index.d.mts                4.15 kB
+                                  dist/infinite/index.d.ts                 4.15 kB
+./infinite (react-server)         dist/infinite/react-server.mjs           348 B
+./mutation                        dist/mutation/index.mjs                  7.49 kB
+                                  dist/mutation/index.js                   7.86 kB
+                                  dist/mutation/index.d.mts                7.62 kB
+                                  dist/mutation/index.d.ts                 7.62 kB
+./immutable                       dist/immutable/index.mjs                 554 B
+                                  dist/immutable/index.js                  649 B
+                                  dist/immutable/index.d.mts               199 B
+                                  dist/immutable/index.d.ts                199 B
+./subscription                    dist/subscription/index.mjs              3.65 kB
+                                  dist/subscription/index.js               3.73 kB
+                                  dist/subscription/index.d.mts            1.65 kB
+                                  dist/subscription/index.d.ts             1.65 kB

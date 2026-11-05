@@ -68,7 +68,7 @@ The build script leaves `node_modules/swr` unchanged. It copies the installed pa
 
 The upstream patch targets `vercel/swr` revision `8148ef012fd5b317d1e8ec2da4b2ca0673f63c0f`, version `2.6.0-beta.0`. The browser example separately proves the released SWR 2.5.1 behaviour with React 19.2.8. The upstream source tests use its pinned React 18.3.1.
 
-The proposed source fix and its regression tests are included in `evidence/upstream.patch`. No upstream issue or PR has been published.
+The proposed source fix and its regression tests are included in `evidence/upstream.patch`. The fix is proposed in [vercel/swr#4381](https://github.com/vercel/swr/pull/4381).
 
 ## Run the source regression in SWR
 

@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 test('a completed mutation survives an older GET', async ({ page }) => {
   const version = process.env.SWR_VERSION ?? 'unpatched';
   const strict = process.env.STRICT_MODE ?? 'true';
-  await page.goto(`/?version=${version}&strict=${strict}`);
+  await page.goto(`${process.env.DEMO_PATH ?? '/'}?version=${version}&strict=${strict}`);
   const value = page.getByRole('status', { name: 'Cached value' });
   await page.getByRole('button', { name: 'Complete initial GET', exact: true }).click();
   await expect(value).toHaveText('enabled');

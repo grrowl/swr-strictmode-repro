@@ -1,0 +1,4 @@
+{
+  "startCommand": "npm run build && npm start",
+  "env": { "HOST": "0.0.0.0" }
+}

@@ -4,6 +4,14 @@ A standalone React example shows an older GET replacing a completed mutation und
 
 The demo uses React's development build so StrictMode replays effects. The reproduction is in [src/App.jsx](src/App.jsx). The same file runs against original SWR 2.5.1 and a copy with the proposed fix.
 
+## Try it in your browser
+
+- [Run the original StrictMode reproduction](https://grrowl.github.io/swr-strictmode-repro/?version=unpatched&strict=true).
+- [Run the corrected StrictMode example](https://grrowl.github.io/swr-strictmode-repro/?version=fixed&strict=true).
+- [Edit and run the source in StackBlitz](https://stackblitz.com/github/grrowl/swr-strictmode-repro?file=src/App.jsx).
+
+The hosted demo needs no installation or sign-in. StackBlitz installs the pinned packages and starts the example automatically. Press the five numbered buttons in order, then compare the cached value.
+
 ## Run the example
 
 ```sh
@@ -60,7 +68,7 @@ The build script leaves `node_modules/swr` unchanged. It copies the installed pa
 
 The upstream patch targets `vercel/swr` revision `8148ef012fd5b317d1e8ec2da4b2ca0673f63c0f`, version `2.6.0-beta.0`. The browser example separately proves the released SWR 2.5.1 behaviour with React 19.2.8. The upstream source tests use its pinned React 18.3.1.
 
-The source fix is committed locally as `315d79272cedd0cf06d5e159a6ef5ccc728a73d8` on `codex/fix-provider-replay-registries` in `/tmp/swr-strictmode-upstream`. No issue or PR has been published.
+The proposed source fix and its regression tests are included in `evidence/upstream.patch`. No upstream issue or PR has been published.
 
 ## Run the source regression in SWR
 

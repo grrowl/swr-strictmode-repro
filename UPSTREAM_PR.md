@@ -10,9 +10,7 @@ Create the mutation, fetch, and preload registries in the existing `initCache` c
 
 ## Reproduction
 
-The standalone example in this review package uses React, native SWR hooks, a Map provider, and deferred promises. No application middleware, generated client, or external API is required. `src/App.jsx` contains the reproduction. `npm run verify` demonstrates the original failure and corrected cases with identical controls and assertions.
-
-Before publishing, replace this paragraph with a link to the reviewed reproduction repository or sandbox. No public reproduction URL has been created yet.
+[Run the example](https://grrowl.github.io/swr-strictmode-repro/) or [edit it in StackBlitz](https://stackblitz.com/github/grrowl/swr-strictmode-repro?file=src/App.jsx). The [40-line reproduction](https://github.com/grrowl/swr-strictmode-repro/blob/main/src/App.jsx) uses React, native SWR hooks, a Map provider, and deferred promises. No application middleware, generated client, or external API is required. The repository's `npm run verify` demonstrates the original failure and corrected cases with identical controls and assertions.
 
 ## Tests
 

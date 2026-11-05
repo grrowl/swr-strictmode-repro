@@ -16,12 +16,13 @@
     <label>StrictMode <select name="strict"><option value="true">On</option><option value="false">Off</option></select></label>
     <button>Load example</button>
   </form>
+  <p><a href="https://github.com/grrowl/swr-strictmode-repro">Source and explanation</a> · <a href="https://stackblitz.com/github/grrowl/swr-strictmode-repro?file=src/App.jsx">Edit in StackBlitz</a></p>
   <div id="root"></div>
   <script type="module">
     const params = new URLSearchParams(location.search);
     document.querySelector('[name=version]').value = params.get('version') ?? 'unpatched';
     document.querySelector('[name=strict]').value = params.get('strict') ?? 'true';
-    await import(params.get('version') === 'fixed' ? '/fixed.js' : '/unpatched.js');
+    await import(params.get('version') === 'fixed' ? './fixed.js' : './unpatched.js');
   </script>
 </body>
 </html>
